@@ -1,0 +1,37 @@
+body, html {
+    height: 100%;
+}
+.navbar {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  
+}
+.navbar-brand {
+    margin: 1px;
+}
+.nav-link {
+    margin: 1px;
+    margin-bottom: 50px;
+}
+
+.btn-completed {
+    background-color: green;
+    color: rgb(201, 18, 18);
+    /* Add any other desired styles */
+}
+.custom-input {
+    height: 60px;
+    color: red;
+  }
+
+  .custom-button {
+    height: 60px;
+    width: 150px;
+  }
+  .input-style{
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-style: normal;
+  }

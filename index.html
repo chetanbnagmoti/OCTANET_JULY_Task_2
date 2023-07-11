@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e94899b3ae.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid h-100" >
+      <div class="row h-100">
+        <div class="col-lg-2 col-sm-5 col-md-6" style="background-color: rgb(69, 69, 110);">
+          <nav class="navbar">
+            <a class="navbar-brand" href="#"><img src="./Logo/ToDoList1.PNG" alt="Todo-List" style="width:180px ; height: 180px; border-radius: 50%;" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+           
+            <div class="collapse navbar-collapse" id="navbarNav">
+            </div>
+              <ul class="nav flex-column" style="margin-bottom: 300px">
+                <li class="nav-item" style="margin-bottom: 50px">
+                  <button class="btn btn-warning" id="add-list">
+                    Show Add Task
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="btn btn-warning" id="completed-task">
+                    Task Completed
+                  </button>
+                </li>
+              </ul>
+           
+          </nav>
+        </div>
+        <div
+          class="col-lg-10 col-sm-7 col-md-6 content"
+          style="background-color: rgb(26, 26, 61)"
+        >
+          <div class="container-fluid  mt-2 mb-2">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 mt-3 mb-3">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    value=""
+                    id="list"
+                    placeholder="Write List"
+                    class="form-control custom-input input-style"
+                    style="color: red"
+                  />
+                  <div class="input-group-append">
+                    <button id="btn" class="btn btn-primary custom-button">
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="container-fluid mt-2 mb-2"
+           
+          >
+            <div class="row">
+              <div
+                class="col col-lg-12  mt-3 mb-3"
+              >
+              <h3
+                  id="Add-task-heading"
+                  class=""
+                  style="
+                    display: none;
+                    text-align: center;
+                    font-size: x-large;
+                    font-weight: bolder;
+                    color: darkred;
+                    width: auto;
+                    margin-left: 30%;
+                    margin-right: 30%;
+                    border-radius: 50%;
+                    background-color: rgb(35, 220, 226);
+                  "
+                >
+                  Added Task
+                </h3>
+                <div class="table-responsive">
+                  <table class="table table-striped  table-primary" id="list-show-table" style="display: none">
+                    <thead>
+                      <tr>
+                        <th scope="col">Task Name</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Add</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody id="list-show-body"></tbody>
+                  </table>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="container-fluid  mt-2 mb-2"
+           
+          >
+            <div class="row">
+              <div
+                class="col col-lg-12  mt-3 mb-3"
+              >
+                <h3
+                  id="completed-task-heading"
+                  class=""
+                  style="
+                    display: none;
+                    text-align: center;
+                    font-size: x-large;
+                    font-weight: bolder;
+                    color: darkred;
+                    width: auto;
+                    margin-left: 30%;
+                    margin-right: 30%;
+                    border-radius: 50%;
+                    background-color: rgb(35, 220, 226);
+                  "
+                >
+                  Completed Task
+                </h3>
+                <div class="table-responsive">
+                  <table class="table table-striped table-info" id="completed-task-table" style="display: none">
+                    <thead>
+                      <tr>
+                        <th scope="col">Task Name</th>
+                        <th scope="col">Starting Time</th>
+                        <th scope="col">Completion Time</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="completed-task-body"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
