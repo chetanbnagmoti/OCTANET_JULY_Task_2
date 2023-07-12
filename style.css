@@ -1,19 +1,11 @@
-body, html {
+body{
     height: 100%;
+    background-size: cover;
+    background-repeat: repeat;
+    background-image: url("./Logo/sky2.PNG");
+    
 }
-.navbar {
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-  
-}
-.navbar-brand {
-    margin: 1px;
-}
-.nav-link {
-    margin: 1px;
-    margin-bottom: 50px;
-}
+
 
 .btn-completed {
     background-color: green;
@@ -25,13 +17,19 @@ body, html {
     color: red;
   }
 
-  .custom-button {
+.custom-button {
     height: 60px;
     width: 150px;
   }
-  .input-style{
+.input-style{
     font-size: x-large;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
     font-style: normal;
   }
+
+ .btn-toggle{
+    border:1px solid rgb(59, 46, 18);
+   
+ }
+ 

@@ -8,10 +8,10 @@ $(document).ready(function() {
       $('#list-show-table').show();
       $('#list-show-body').append(
         '<tr class="list-item">' +
-        '<td scope="col"><span class="task-text"  style="color: brown; font-weight: bold;  font-size: larger;"> ' + inputVal + '</span></td>' +
-        '<td scope="col"><button class="edit-btn"><i class="fa fa-edit"></i></button></td>' +
-        '<td scope="col"><button class="done-btn"><i class="fa fa-check"></i></button></td>' +
-        '<td scope="col"><button class="delete-btn"><i class="fa fa-remove"></i></button></td>' +
+        '<td scope="col"><span class="task-text"  style="color: white; font-weight: bold;  font-size: larger;"> ' + inputVal + '</span></td>' +
+        '<td scope="col"><button class="edit-btn btn btn-warning"><i class="fa fa-edit"></i></button></td>' +
+        '<td scope="col"><button class="delete-btn btn btn-danger"><i class="fa fa-remove"></i></button></td>' +
+        '<td scope="col"><button class="done-btn btn btn-success"><i class="fa fa-check"></i></button></td>'+
       '</tr>'
       )
       $('#list').val(''); // Clear the input field after appending
@@ -43,11 +43,11 @@ $(document).ready(function() {
     listItem.remove();
     $('#completed-task-table').hide();
     $('#completed-task-body').append(
-      '<tr  style="color: brown; font-weight: bold;  font-size: larger;">' +
+      '<tr  style="color: white; font-weight: bold;  font-size: larger;">' +
         '<td scope="col">' + taskText + '</td>' +
         '<td scope="col" class="starting-time">' + currentDate + '</td>' +
         '<td scope="col" class="completed-time"></td>' +
-        '<td scope="col"><button class="completed-task-btn">Complete</button></td>' +
+        '<td scope="col"><button class="completed-task-btn btn btn-info ">Complete</button></td>' +
       '</tr>'
     );
   });
@@ -57,7 +57,7 @@ $(document).ready(function() {
     var currentDate = new Date().toLocaleString();
     tableRow.find('.completed-time').text(currentDate);
     tableRow.find('td:first-child').css('text-decoration-line', 'line-through','solid');
-    tableRow.find('.completed-task-btn').replaceWith('<span class="completed-message">Task Completed</span>');
+    tableRow.find('.completed-task-btn').replaceWith('<span class="completed-message text-warning">Task Completed</span>');
     $(this).remove();
   });
   
